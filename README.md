@@ -15,6 +15,7 @@ My personal cheat sheet for when I work via CLI. Vademecum is a latin word that 
 | `CTRL+b "` | Split pane horizontally |
 | `CRTL+b %` |  Split pane vertically  |
 | `CRTL+b x` |  Kill the active pane  |
+| `CRTL+b [` |  Activate scroll mode  |
 
 ## Set-up your CLI
 
