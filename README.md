@@ -2,6 +2,20 @@
 
 My personal cheat sheet for when I work via CLI. Vademecum is a latin word that describes a handbook or guide that is kept constantly at hand for consultation.
 
+## Cheat sheet
+
+### TMUX
+
+|  Command |       Explanation       |
+|:--------:|:-----------------------:|
+| `tmux` | Start a nameless TMUX session |
+| `tmux new -s [name]` | Start a TMUX session with name [name] |
+| `tmux a -t [name]` | Attach to the session with name [name] |
+| `tmux ls` | List all TMUX active sessions |
+| `CTRL+b "` | Split pane horizontally |
+| `CRTL+b %` |  Split pane vertically  |
+| `CRTL+b x` |  Kill the active pane  |
+
 ## Set-up your CLI
 
 1. Install `tree` (via `sudo apt-get install tree`).
