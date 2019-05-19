@@ -10,6 +10,7 @@ My personal cheat sheet for when I work via CLI. Vademecum is a latin word that 
 |:--------:|:-----------------------:|
 | `git init` | Initiate git in the current repository  |
 | `git status` | Check the status  |
+| `git remote -v` | Check all available remotes  |
 | `git branch [name]` | Create a new branch called [name] off current HEAD |
 | `git branch -v` | List all available branches |
 | `git checkout [name]` | Move to branch [name] |
