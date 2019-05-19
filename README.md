@@ -8,17 +8,22 @@ My personal cheat sheet for when I work via CLI. Vademecum is a latin word that 
 
 |  Command |       Explanation       |
 |:--------:|:-----------------------:|
-| `git status` | Check  |
-| `git branch [name]` | Create a new branch called [name] |
+| `git init` | Initiate git in the current repository  |
+| `git status` | Check the status  |
+| `git branch [name]` | Create a new branch called [name] off current HEAD |
 | `git branch -v` | List all available branches |
 | `git checkout [name]` | Move to branch [name] |
 | `git add [files]` | Add files to the staging areas |
 | `git commit` | Create a commit |
 | `git commit -m` | Create a commit with only a short message |
+| `git push` | Push the commits to *origin* |
 | `git fetch` | Fetch information from *origin* |
-| `git pull` | Pull from *origin* |
+| `git merge [name]` | Merge branch [name] into current branch |
+| `git merge origin/[name]` | Merge branch [name] on *origin* into current branch |
+| `git pull` | Equivalent of `git fetch` + `git merge origin/master` |
 | `git stash` |  Store the current changes into a new *stash*  |
 | `git stash list` |  List all available stashes  |
+| `git reset --hard HEAD` |  Remove all changes since last commit  |
 
 List of Git best practices, most of which come from [Learn Version Control with Git](https://www.goodreads.com/book/show/22437589-learn-version-control-with-git) by Tobias Günther:
 
@@ -40,7 +45,7 @@ List of Git terms:
 | **HEAD** | See **Branch**. |
 | **Master** | The default development branch. Whenever you create a Git repository, a branch named "master" is created, and becomes the active branch. In most cases, this contains the local development, though that is purely by convention and is not required. |
 | **Merge** | To bring the contents of another branch (possibly from an external repository) into the current branch. In the case where the merged-in branch is from a different repository, this is done by first fetching the remote branch and then merging the result into the current branch. This combination of fetch and merge operations is called a pull. Merging is performed by an automatic process that identifies changes made since the branches diverged, and then applies all those changes together. In cases where changes conflict, manual intervention may be required to complete the merge. |
-| **Origin** | The default upstream repository. Most projects have at least one upstream project which they track. By default origin is used for that purpose. New upstream updates will be fetched into remote-tracking branches named origin/name-of-upstream-branch, which you can see using `git branch -r`. |
+| **Origin** | The default upstream repository (i.e. a *remote*). Most projects have at least one upstream project which they track. By default origin is used for that purpose. New upstream updates will be fetched into remote-tracking branches named origin/name-of-upstream-branch, which you can see using `git branch -r`. |
 | **Pull** | Pulling a branch means to fetch it and merge it. |
 | **Push** | Pushing a branch means to get the branch’s head ref from a remote repository, find out if it is an ancestor to the branch’s local head ref, and in that case, putting all objects, which are reachable from the local head ref, and which are missing from the remote repository, into the remote object database, and updating the remote head ref. If the remote head is not an ancestor to the local head, the push fails. |
 | **Stash** | Where changes are stored to be later retrieved (see `git stash`). Note that these changes are not attached to any branch in particular. |
