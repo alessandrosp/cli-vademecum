@@ -4,6 +4,50 @@ My personal cheat sheet for when I work via CLI. Vademecum is a latin word that 
 
 ## Cheat sheet
 
+### Git
+
+|  Command |       Explanation       |
+|:--------:|:-----------------------:|
+| `git status` | Check  |
+| `git branch [name]` | Create a new branch called [name] |
+| `git branch -v` | List all available branches |
+| `git checkout [name]` | Move to branch [name] |
+| `git add [files]` | Add files to the staging areas |
+| `git commit` | Create a commit |
+| `git commit -m` | Create a commit with only a short message |
+| `git fetch` | Fetch information from *origin* |
+| `git pull` | Pull from *origin* |
+| `git stash` |  Store the current changes into a new *stash*  |
+| `git stash list` |  List all available stashes  |
+
+List of Git best practices, most of which come from [Learn Version Control with Git](https://www.goodreads.com/book/show/22437589-learn-version-control-with-git) by Tobias Günther:
+
+- Commit related changes.
+- Commit often.
+- Don't commit half-done work.
+- Test before you commit.
+- Write good commit messages.
+- Version control is not a backup system.
+- **Use branches**.
+- Agree on a [workflow](https://guides.github.com/introduction/flow/) with your team.
+
+List of Git terms:
+
+|  Command |       Explanation       |
+|:--------:|:-----------------------:|
+| **Branch** | A "branch" is an active line of development. The most recent commit on a branch is referred to as the tip of that branch. The tip of the branch is referenced by a branch head, which moves forward as additional development is done on the branch. A single Git repository can track an arbitrary number of branches, but your working tree is associated with just one of them (the "current" or "checked out" branch), and HEAD points to that branch.  |
+| **Commit** | As a noun: A single point in the Git history; the entire history of a project is represented as a set of interrelated commits. The word "commit" is often used by Git in the same places other revision control systems use the words "revision" or "version". Also used as a short hand for commit object. As a verb: The action of storing a new snapshot of the project’s state in the Git history, by creating a new commit representing the current state of the index and advancing HEAD to point at the new commit. |
+| **HEAD** | See **Branch**. |
+| **Master** | The default development branch. Whenever you create a Git repository, a branch named "master" is created, and becomes the active branch. In most cases, this contains the local development, though that is purely by convention and is not required. |
+| **Merge** | To bring the contents of another branch (possibly from an external repository) into the current branch. In the case where the merged-in branch is from a different repository, this is done by first fetching the remote branch and then merging the result into the current branch. This combination of fetch and merge operations is called a pull. Merging is performed by an automatic process that identifies changes made since the branches diverged, and then applies all those changes together. In cases where changes conflict, manual intervention may be required to complete the merge. |
+| **Origin** | The default upstream repository. Most projects have at least one upstream project which they track. By default origin is used for that purpose. New upstream updates will be fetched into remote-tracking branches named origin/name-of-upstream-branch, which you can see using `git branch -r`. |
+| **Pull** | Pulling a branch means to fetch it and merge it. |
+| **Push** | Pushing a branch means to get the branch’s head ref from a remote repository, find out if it is an ancestor to the branch’s local head ref, and in that case, putting all objects, which are reachable from the local head ref, and which are missing from the remote repository, into the remote object database, and updating the remote head ref. If the remote head is not an ancestor to the local head, the push fails. |
+| **Stash** | Where changes are stored to be later retrieved (see `git stash`). Note that these changes are not attached to any branch in particular. |
+| **Working Tree** | The tree of actual checked out files. The working tree normally contains the contents of the HEAD commit’s tree, plus any local changes that you have made but not yet committed. |
+
+
+
 ### TMUX
 
 |  Command |       Explanation       |
