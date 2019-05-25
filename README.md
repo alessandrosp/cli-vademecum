@@ -17,12 +17,14 @@ My personal cheat sheet for when I work via CLI. Vademecum is a latin word that 
 | `git add [files]` | Add files to the staging areas |
 | `git commit` | Create a commit |
 | `git commit -m` | Create a commit with only a short message |
-| `git push [remote] [branch]` | Push the commits to remote [remote], branch [branch] |
+| `git push [remote] [branch]` | Push the commits to remote [remote]/[branch] |
 | `git push origin master` | The default version of the command above |
-| `git fetch [remote] [branch]` | Fetch information from remote [remote], branch [branch]  |
-| `git fetc origin master` | The default version of the command above |
-| `git merge [name]` | Merge branch [name] into current branch |
-| `git merge origin/[name]` | Merge branch [name] on *origin* into current branch |
+| `git fetch [remote] [branch]` | Fetch information from [remote]/[branch]  |
+| `git fetch origin master` | The default version of the command above |
+| `git merge [branch]` | Merge [branch] into current branch |
+| `git merge [remote]/[branch]` | Merge [branch] in [origin] into current branch |
+| `git push --delete [remote] [branch]` | Delete [branch] in [remote] |
+| `git branch -d [branch]` | Delete [branch] locally |
 | `git pull` | Equivalent of `git fetch` + `git merge origin/master` |
 | `git stash` |  Store the current changes into a new *stash*  |
 | `git stash list` |  List all available stashes  |
